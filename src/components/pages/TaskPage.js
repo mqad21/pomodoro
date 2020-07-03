@@ -22,7 +22,6 @@ import { useParams, Redirect } from "react-router-dom";
 import { useIndexedDB } from "react-indexed-db";
 import { showNotif } from "../../helper/showNotif";
 import useSound from 'use-sound';
-import alarm from '../../assets/alarm.mp3';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,10 +43,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TaskPage(props) {
-  const { state, actions, updateTasks } = React.useContext(Context);
+  const { state, updateTasks } = React.useContext(Context);
   const theme = useTheme();
   const classes = useStyles();
-  const [error, setError] = React.useState(false);
+  const [error,] = React.useState(false);
   const [isPlay, setIsPlay] = React.useState(false);
   const id = useParams().id;
   const { update } = useIndexedDB("tasks");
@@ -56,8 +55,12 @@ export default function TaskPage(props) {
   })[0];
   console.log(task);
   const ended = React.useRef(false);
-  const [play, { stop }] = useSound(alarm);
+  const alarm = 'https://mqad21.github.io/pomodoro/assets/alarm.mp3';
+  const beep = 'https://mqad21.github.io/pomodoro/assets/beep.mp3';
 
+  const [play, { stop }] = useSound(alarm);
+  const [playBeep, { stopBeeb }] = useSound(beep);
+  
   const updateTask = (updatedTask) => {
     update(updatedTask).then((e) => {
       updateTasks();
@@ -76,6 +79,7 @@ export default function TaskPage(props) {
   };
 
   const changeStatus = (to, callback, forward) => {
+    stop();
     let count;
     if (forward) {
       count =
@@ -135,6 +139,7 @@ export default function TaskPage(props) {
     }
 
     const handleStart = () => {
+      playBeep();
       stop();
       ended.current = false;
       start();

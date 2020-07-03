@@ -91,19 +91,6 @@ export default function SettingsPage(props) {
     });
   };
 
-  React.useEffect(() => {
-    // actions({
-    //   type: 'setState',
-    //   payload: {
-    //     ...state,
-    //     settings: {
-    //       ...state.settings,
-    //       darkMode: darkMode ? 1 : 0
-    //     }
-    //   }
-    // })
-  }, [darkMode]);
-
   const SettingsMenu = () =>
     settingsList.map((setting, idx) => {
       return (

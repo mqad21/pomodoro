@@ -2,7 +2,7 @@ import React from "react";
 import Main from "./Main";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import red from '@material-ui/core/colors/red';
 import grey from '@material-ui/core/colors/grey';
 import Context from "./store/Context";

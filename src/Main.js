@@ -38,6 +38,7 @@ export default function Main() {
   const location = useLocation().pathname.split("/")[1];
   const displayBack = ["task", "settings", "about"].includes(location);
   const [title, setTitle] = React.useState("Pomodoro Timer");
+  const [isPlay, setIsPlay] = React.useState(false);
 
   const handleClickOutside = () => {
     if (state.selectedTasks.length != 0) {
@@ -80,7 +81,7 @@ export default function Main() {
 
   return (
     <React.Fragment>
-      <TopBar displayBack={displayBack} title={getTitle()} />
+      <TopBar isPlay={isPlay} displayBack={displayBack} title={getTitle()} />
       <Switch>
         <Route exact path="/">
           <Content
@@ -99,7 +100,7 @@ export default function Main() {
         <Route exact path="/task/:id">
           <Content
             bottomNav={false}
-            component={<TaskPage setTitle={setTitle} noMargin={false} />}
+            component={<TaskPage setIsPlay={setIsPlay} setTitle={setTitle} noMargin={false} />}
           />
         </Route>
         <Route exact path="/settings">

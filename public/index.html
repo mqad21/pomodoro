@@ -24,7 +24,7 @@
     if (!("serviceWorker" in navigator)) {
       console.error("Browser not supported.");
     } else {
-      navigator.serviceWorker.register("/sw.js")
+      navigator.serviceWorker.register("/pomodoro/sw.js")
         .then(function(registration) {
           console.log("Service worker has been registered.");
         });

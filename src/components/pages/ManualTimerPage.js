@@ -17,6 +17,7 @@ import {
 import ControlButton from "../ControlButton";
 import Timer from "react-compound-timer";
 import { showNotif } from "../../helper/showNotif";
+import useSound from 'use-sound';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,6 +48,11 @@ export default function ManualTimerPage() {
   const manualTimer = state.manualTimer;
   const [isPlay, setIsPlay] = React.useState(false);
   const ended = React.useRef(false);
+  const alarm = 'https://mqad21.github.io/pomodoro/assets/alarm.mp3';
+  const beep = 'https://mqad21.github.io/pomodoro/assets/beep.mp3';
+
+  const [play, { stop }] = useSound(alarm);
+  const [playBeep, { stopBeeb }] = useSound(beep);
 
   const updateCurrentTime = (time, isStart) => {
     if (time < 0) time = 0;
@@ -84,9 +90,13 @@ export default function ManualTimerPage() {
       ended.current = true;
       setIsPlay(false);
       showNotif(manualTimer.status, false, state.settings.notif);
+      play();
+      const time = state.settings.pomodoroTime[manualTimer.status];
+      updateCurrentTime(time, 0);
     }
 
     const handleStart = () => {
+      playBeep();
       ended.current = false;
       start();
       setIsPlay(true);

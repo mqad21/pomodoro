@@ -76,7 +76,7 @@ export default function TopBar(props) {
   };
 
   const handleBack = () => {
-    window.history.back();
+    history.push("/");
   };
 
   return (
@@ -84,6 +84,7 @@ export default function TopBar(props) {
       <AppBar>
         <Toolbar>
           <IconButton
+            disabled={props.isPlay}
             edge="start"
             style={{ display: props.displayBack ? "" : "none" }}
             color="inherit"
