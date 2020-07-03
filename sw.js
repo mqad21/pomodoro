@@ -15,7 +15,7 @@ const precacheManifest = [
   },
   {
     "url": "logo192.png",
-    "revision": "066f4a092a10e7cdfacea79fae73e9ae"
+    "revision": "a4740bd6e3ebebae74478faee17ebcf7"
   },
   {
     "url": "logo512.png",
