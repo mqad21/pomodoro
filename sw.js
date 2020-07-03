@@ -3,7 +3,7 @@ import workbox from 'https://storage.googleapis.com/workbox-cdn/releases/3.6.3/w
 const precacheManifest = [
   {
     "url": "asset-manifest.json",
-    "revision": "d99ccd9a4f44762cb1993652a9535cd7"
+    "revision": "95255ca1a14457d64d5ae30e7da08c7f"
   },
   {
     "url": "assets/no-data.png",
@@ -11,23 +11,23 @@ const precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "635f62401813018a4bc2673fd3dee66f"
+    "revision": "7d5b10735970ffb76d64d11b6e5957cb"
   },
   {
     "url": "logo192.png",
-    "revision": "33dbdd0177549353eeeb785d02c294af"
+    "revision": "066f4a092a10e7cdfacea79fae73e9ae"
   },
   {
     "url": "logo512.png",
-    "revision": "917515db74ea8d1aee6a246cfbcc0b45"
+    "revision": "7ffd2e73a9fda2a959f7f95cd478d9a4"
   },
   {
     "url": "manifest.json",
-    "revision": "46fa364aeb97b861225fa8fe4e2532d2"
+    "revision": "25d072de763b6dfdabf298e22649a748"
   },
   {
-    "url": "precache-manifest.00cd42260cdb417da2d44fcc0f378620.js",
-    "revision": "00cd42260cdb417da2d44fcc0f378620"
+    "url": "precache-manifest.546dcf406194c38a562196f846bf42c2.js",
+    "revision": "546dcf406194c38a562196f846bf42c2"
   },
   {
     "url": "robots.txt",
@@ -35,18 +35,18 @@ const precacheManifest = [
   },
   {
     "url": "service-worker.js",
-    "revision": "7490c8bd7671214e3d18a9441d5bb8cb"
+    "revision": "c9f59c4f54bba87973bec1844aba75a8"
   },
   {
     "url": "static/css/main.5f361e03.chunk.css",
     "revision": "1472653e7cd5f55fc8eabda93770382e"
   },
   {
-    "url": "static/js/2.cd8b3c57.chunk.js",
-    "revision": "2982dac1394d4aa57891563b195708d2"
+    "url": "static/js/2.79db825d.chunk.js",
+    "revision": "6f931c845bc17a55d99e653d2aaef1fb"
   },
   {
-    "url": "static/js/2.cd8b3c57.chunk.js.LICENSE.txt",
+    "url": "static/js/2.79db825d.chunk.js.LICENSE.txt",
     "revision": "2142ab953a70f3d6b728c052b5d2e704"
   },
   {
@@ -58,8 +58,8 @@ const precacheManifest = [
     "revision": "287e48aeac3564a8b2b5685a67fb9216"
   },
   {
-    "url": "static/js/main.54976336.chunk.js",
-    "revision": "96554467f8d23de1d811e7273a7cc15f"
+    "url": "static/js/main.7d152590.chunk.js",
+    "revision": "97109753c0e8e58978c44452783c0578"
   },
   {
     "url": "static/js/runtime-main.76e556a2.js",

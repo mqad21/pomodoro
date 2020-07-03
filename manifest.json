@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://mqad21.github.io/pomodoro/",
   "display": "standalone",
   "theme_color": "#e53935",
   "background_color": "#ffffff"
